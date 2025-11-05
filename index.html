@@ -1,103 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Heart Disease Prediction</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heart Disease Risk Prediction</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>💓 Heart Disease Prediction</h1>
-    <form id="predictionForm">
-      <div class="form-grid">
-        <label>BMI: <input type="number" step="0.1" id="BMI" required /></label>
-        <label>Smoking: 
-          <select id="Smoking" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Alcohol Drinking:
-          <select id="AlcoholDrinking" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Stroke:
-          <select id="Stroke" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Physical Health: <input type="number" id="PhysicalHealth" required /></label>
-        <label>Mental Health: <input type="number" id="MentalHealth" required /></label>
-        <label>Diff Walking:
-          <select id="DiffWalking" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Sex:
-          <select id="Sex" required>
-            <option value="">Select</option>
-            <option value="1">Male</option>
-            <option value="0">Female</option>
-          </select>
-        </label>
-        <label>Age (in years): <input type="number" id="Age" required min="18" max="90" /></label>
-        <label>Physical Activity:
-          <select id="PhysicalActivity" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>General Health (1–5): <input type="number" id="GenHealth" required min="1" max="5" /></label>
-        <label>Sleep Time (hours): <input type="number" id="SleepTime" required /></label>
-        <label>Asthma:
-          <select id="Asthma" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Kidney Disease:
-          <select id="KidneyDisease" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Skin Cancer:
-          <select id="SkinCancer" required>
-            <option value="">Select</option>
-            <option value="0">No</option>
-            <option value="1">Yes</option>
-          </select>
-        </label>
-        <label>Race:
-          <select id="Race" required>
-            <option value="">Select</option>
-            <option value="White">White</option>
-            <option value="Black">Black</option>
-            <option value="Asian">Asian</option>
-            <option value="Hispanic">Hispanic</option>
-            <option value="Other">Other</option>
-          </select>
-        </label>
-        <label>Diabetic:
-          <select id="Diabetic" required>
-            <option value="">Select</option>
-            <option value="No, borderline diabetes">No, borderline diabetes</option>
-            <option value="Yes">Yes</option>
-            <option value="Yes (during pregnancy)">Yes (during pregnancy)</option>
-          </select>
-        </label>
+    <h1>❤️ Heart Disease Risk Prediction</h1>
+    <form id="prediction-form">
+
+      <div class="form-group">
+        <label>BMI:</label>
+        <input type="number" id="BMI" required step="0.1" min="10" max="50">
+      </div>
+
+      <div class="form-group">
+        <label>Age:</label>
+        <input type="number" id="Category" required min="18" max="100">
+      </div>
+
+      <div class="form-group">
+        <label>Smoking:</label>
+        <select id="Smoking" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Alcohol Drinking:</label>
+        <select id="AlcoholDrinking" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stroke:</label>
+        <select id="Stroke" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Physical Health (0–30):</label>
+        <input type="number" id="PhysicalHealth" required min="0" max="30">
+      </div>
+
+      <div class="form-group">
+        <label>Mental Health (0–30):</label>
+        <input type="number" id="MentalHealth" required min="0" max="30">
+      </div>
+
+      <div class="form-group">
+        <label>Difficulty Walking:</label>
+        <select id="DiffWalking" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Sex:</label>
+        <select id="Sex" required>
+          <option value="0">Female</option>
+          <option value="1">Male</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Physical Activity:</label>
+        <select id="PhysicalActivity" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>General Health (1–5):</label>
+        <input type="number" id="GenHealth" required min="1" max="5">
+      </div>
+
+      <div class="form-group">
+        <label>Sleep Time (hours):</label>
+        <input type="number" id="SleepTime" required min="1" max="24">
+      </div>
+
+      <div class="form-group">
+        <label>Asthma:</label>
+        <select id="Asthma" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Kidney Disease:</label>
+        <select id="KidneyDisease" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Skin Cancer:</label>
+        <select id="SkinCancer" required>
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Race:</label>
+        <select id="Race_White" required>
+          <option value="1">White</option>
+          <option value="0">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Diabetic:</label>
+        <select id="Diabetic_No" required>
+          <option value="1">No, borderline diabetes</option>
+          <option value="0">Other</option>
+        </select>
+        <select id="Diabetic_Yes">
+          <option value="0">Not Pregnant/No</option>
+          <option value="1">Yes</option>
+        </select>
+        <select id="Diabetic_Preg">
+          <option value="0">No</option>
+          <option value="1">Yes (During pregnancy)</option>
+        </select>
       </div>
 
       <button type="submit">Predict</button>
